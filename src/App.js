@@ -14,8 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/kopeeteariareactv1/" element={<Home></Home>}></Route>
-          <Route path="/kopeeteariareactv1/notfound" element={<Show404></Show404>}></Route>
-          <Route path="*" element={<Navigate to='/notfound' replace></Navigate>} />
+          <Route path="/kopeeteariareactv1/*" element={<Show404></Show404>} />
         </Routes>
       </BrowserRouter>
     </div>
