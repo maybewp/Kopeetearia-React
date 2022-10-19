@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Home from "./Home/Home";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Show404 from "./ErrorPage/Show404";
 import { useSelector } from "react-redux";
 
@@ -14,7 +14,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/kopeeteariareactv1/" element={<Home></Home>}></Route>
-          <Route path="/kopeeteariareactv1/*" element={<Show404></Show404>} />
+          <Route path="/kopeeteariareactv1/notfound" element={<Show404></Show404>}></Route>
+          <Route path="/kopeeteariareactv1/*" element={<Navigate to='/notfound' replace></Navigate>} />
         </Routes>
       </BrowserRouter>
     </div>
