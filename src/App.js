@@ -13,8 +13,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/Kopeetearia-REACT-v2" element={<Home></Home>}></Route>
-          <Route path="*" element={<Show404></Show404>} />
+          <Route path="/kopeeteariareactv1/" element={<Home></Home>}></Route>
+          <Route path="/kopeeteariareactv1/*" element={<Show404></Show404>} />
         </Routes>
       </BrowserRouter>
     </div>

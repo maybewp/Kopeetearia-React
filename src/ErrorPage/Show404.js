@@ -20,7 +20,7 @@ const Show404 = () => {
             <pre data-prefix="3" className="bg-error text-warning-content">
               <code>Error! Page is not found</code>
             </pre>
-            <Link to="/Kopeetearia-REACT-v2">
+            <Link to="/kopeeteariareactv1">
             <button className="btn btn-outline btn-success btn-sm my-3">Back to Home</button>
             </Link>
           </div>
