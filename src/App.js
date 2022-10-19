@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/Kopeetearia-REACT-v2" element={<Home></Home>}></Route>
           <Route path="*" element={<Show404></Show404>} />
         </Routes>
       </BrowserRouter>

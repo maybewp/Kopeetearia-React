@@ -25,7 +25,7 @@ const OrderEdit = (props) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:9000/orders/${selected.id}`,
+        `http://localhost:8100/Kopeetearia-API-v1/orders/${selected.id}`,
         {
           orderName: getOrderName,
           price: getPrice,

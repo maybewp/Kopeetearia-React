@@ -26,7 +26,7 @@ const OrderList = () => {
   // Import API
   const listOrders = async () => {
     try {
-      const response = await axios.get(`http://localhost:9000/orders`);
+      const response = await axios.get(`http://localhost:8100/Kopeetearia-API-v1/orders`);
       const data = await response.data.data;
       setOrders(data);
     } catch (error) {
@@ -43,7 +43,7 @@ const OrderList = () => {
   const getTotalRegular = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:9000/orders/total-regular`
+        `http://localhost:8100/Kopeetearia-API-v1/orders/total-regular`
       );
       const data = await response.data;
       setTotalRegular(data);
@@ -56,7 +56,7 @@ const OrderList = () => {
   const getTotalDiscounted = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:9000/orders/total-discounted`
+        `http://localhost:8100/Kopeetearia-API-v1/orders/total-discounted`
       );
       const data = await response.data;
       setTotalDiscounted(data);
@@ -79,7 +79,7 @@ const OrderList = () => {
     if (tableStatus === false) {
       // Api Add
       try {
-        const response = await axios.post(`http://localhost:9000/orders`, {
+        const response = await axios.post(`http://localhost:8100/Kopeetearia-API-v1/orders`, {
           orderName: getOrderName,
           price: getPrice,
           discounted: getDiscounted,
@@ -110,7 +110,7 @@ const OrderList = () => {
   const editHandler = async (id) => {
     dispatch(changeTableStatus(true));
     try {
-      const response = await axios.get(`http://localhost:9000/orders/${id}`);
+      const response = await axios.get(`http://localhost:8100/Kopeetearia-API-v1/orders/${id}`);
       const data = response.data.data;
       dispatch(selectedOrder(data));
     } catch (error) {
@@ -124,7 +124,7 @@ const OrderList = () => {
 
   const deleteHandler = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:9000/orders/${id}`);
+      const response = await axios.delete(`http://localhost:8100/Kopeetearia-API-v1/orders/${id}`);
       const data = response.data;
       dispatch(counter(1));
       MySwal.fire({
