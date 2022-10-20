@@ -177,6 +177,7 @@ const OrderList = () => {
                   className="input input-xs w-full max-w-xs shadow"
                   value={getOrderName}
                   onChange={(e) => setOrderName(e.target.value)}
+                  required
                 />
               </td>
               <td>
@@ -187,6 +188,7 @@ const OrderList = () => {
                   className="input input-xs w-full max-w-xs shadow"
                   value={getPrice}
                   onChange={(e) => setPrice(e.target.value)}
+                  required
                 />
               </td>
               <td>
